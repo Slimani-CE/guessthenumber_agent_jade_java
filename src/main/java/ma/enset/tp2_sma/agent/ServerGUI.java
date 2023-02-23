@@ -9,7 +9,6 @@ import jade.wrapper.ControllerException;
 import jade.wrapper.StaleProxyException;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.NodeOrientation;
 import javafx.scene.Scene;
@@ -21,7 +20,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class ServerGUI extends Application {

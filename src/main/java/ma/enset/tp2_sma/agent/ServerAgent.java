@@ -22,7 +22,7 @@ public class ServerAgent extends GuiAgent {
         serverGUI = (ServerGUI) getArguments()[0];
         serverGUI.setServerAgent(this);
         // Initialize the number to guess
-        numberToGuess = (int) (Math.random() * 1000);
+        numberToGuess = (int) (Math.random() * 100);
         System.out.println("Number to guess: " + numberToGuess);
 
         // Cyclic behaviour to receive messages

@@ -9,8 +9,6 @@ import jade.wrapper.AgentController;
 import jade.wrapper.StaleProxyException;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.NodeOrientation;
@@ -20,7 +18,6 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
-import ma.enset.tp2_sma.containers.MainContainer;
 
 import java.io.IOException;
 
@@ -35,7 +32,7 @@ public class ClientGUI extends Application {
     @FXML
     private ScrollPane scrollPane;
     private ClientAgent clientAgent;
-    public static void main(String[] args) throws StaleProxyException {
+    public static void main(String[] args) {
         launch(args);
     }
 
@@ -44,7 +41,7 @@ public class ClientGUI extends Application {
         ProfileImpl profileImpl = new ProfileImpl();
         profileImpl.setParameter(ProfileImpl.MAIN_HOST, "localhost");
         AgentContainer agentContainer = runtime.createAgentContainer(profileImpl);
-        AgentController agentController = agentContainer.createNewAgent("client1", "ma.enset.tp2_sma.agent.ClientAgent", new Object[]{this});
+        AgentController agentController = agentContainer.createNewAgent("client2", "ma.enset.tp2_sma.agent.ClientAgent", new Object[]{this});
         agentController.start();
     }
 
